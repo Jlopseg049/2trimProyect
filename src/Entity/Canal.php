@@ -126,4 +126,9 @@ class Canal
         return $this;
     }
 
+    public function __toString()
+    {
+        return $this->Author;
+    }
+
 }

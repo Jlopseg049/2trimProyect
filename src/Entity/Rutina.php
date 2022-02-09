@@ -12,6 +12,7 @@ class Rutina
     #[ORM\GeneratedValue]
     #[ORM\Column(type: 'integer')]
     private $id;
+    
 
     #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'reservas')]
     #[ORM\JoinColumn(nullable: false)]
@@ -25,13 +26,12 @@ class Rutina
 
     #[ORM\ManyToOne(targetEntity: Canal::class, inversedBy: 'reservas')]
     #[ORM\JoinColumn(nullable: false)]
-    private $canal;
+    private $Canal;
 
     #[ORM\Column(type: 'float')]
     private $precio;
 
-    #[ORM\Column(type: 'array')]
-    private $dias = [];
+
 
     public function getId(): ?int
     {
@@ -74,14 +74,14 @@ class Rutina
         return $this;
     }
 
-    public function getCanal(): ?canal
+    public function getCanal(): ?Canal
     {
-        return $this->canal;
+        return $this->Canal;
     }
 
-    public function setCanal(?canal $canal): self
+    public function setCanal(?Canal $Canal): self
     {
-        $this->canal = $canal;
+        $this->Canal = $Canal;
 
         return $this;
     }
@@ -98,16 +98,6 @@ class Rutina
         return $this;
     }
 
-    public function getDias(): ?array
-    {
-        return $this->dias;
-    }
 
-    public function setDias(array $dias): self
-    {
-        $this->dias = $dias;
-
-        return $this;
-    }
 }
 

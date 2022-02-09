@@ -7,6 +7,7 @@ use App\Entity\Canal;
 use App\Entity\Rutina;
 use App\Entity\Reserva;
 use App\Controller\Admin\UserCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -54,5 +55,10 @@ class DashboardController extends AbstractDashboardController
 
 
 
+    }
+    public function configureAssets(): Assets
+    {
+        return parent::configureAssets()
+            ->addWebpackEncoreEntry('calculaPrecio');
     }
 }
