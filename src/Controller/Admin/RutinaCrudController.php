@@ -21,7 +21,7 @@ class RutinaCrudController extends AbstractCrudController
     
     public function configureFields(string $pageName): iterable
     {
-        $dias=['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+        $dias=['Lun', 'Mar', 'Mier', 'Jue', 'Vie', 'Sab', 'Dom'];
         return [
             yield AssociationField::new('Canal'),
             yield AssociationField::new('Cliente'),
