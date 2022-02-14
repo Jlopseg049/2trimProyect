@@ -8,8 +8,8 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
 // start the Stimulus application
-import './bootstrap';
+//import './bootstrap';
 
 //Para añadir jquery a nuestros documentos una vez hayamos descomentado el ultimo apartado del
 //fichero webpack.config.js
-const $ = require('jquery');
+global.$ = global.jQuery = $;

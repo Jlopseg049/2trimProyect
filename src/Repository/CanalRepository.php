@@ -47,4 +47,18 @@ class CanalRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findPrecioByAuthor(string $author)
+    {
+        $qb = $this->createQueryBuilder('c');
+        $query = $qb->where(
+                $qb->expr()->eq('c.Author', ':author')
+            )
+            ->setParameter('author' , $author)
+            ->getQuery()
+            ;   
+            echo $query->getSQL(); 
+            echo $query->getParameters();
+
+        }
 }
