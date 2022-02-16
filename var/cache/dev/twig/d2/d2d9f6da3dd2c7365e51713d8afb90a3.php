@@ -1798,6 +1798,6 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
 </body>
 
 </html>
-", "index/index.html.twig", "C:\\Users\\Kazu\\Desktop\\symfonyGit\\templates\\index\\index.html.twig");
+", "index/index.html.twig", "C:\\Users\\alumno\\Desktop\\symfony\\templates\\index\\index.html.twig");
     }
 }
