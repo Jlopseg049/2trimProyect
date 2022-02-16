@@ -14,7 +14,7 @@ class CanalController extends AbstractController
     public function show(string $author, ManagerRegistry $doctrine): Response
     {
         $Canal = $doctrine->getRepository(Canal::class)->findPrecioByAuthor($author);
-var_dump($Canal);
-        //return new Response($Canal->getPrecio());
+        
+        return new Response($Canal[0]["precio"]);
     }
 }

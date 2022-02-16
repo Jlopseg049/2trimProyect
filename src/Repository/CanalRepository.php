@@ -50,15 +50,17 @@ class CanalRepository extends ServiceEntityRepository
 
     public function findPrecioByAuthor(string $author)
     {
-        $qb = $this->createQueryBuilder('c');
-        $query = $qb->where(
-                $qb->expr()->eq('c.Author', ':author')
-            )
-            ->setParameter('author' , $author)
-            ->getQuery()
-            ;   
-            echo $query->getSQL(); 
-            echo $query->getParameters();
+    $con = $this->getEntityManager()->getConnection();
+
+    $query ='select canal.precio from canal
+                            join "user" u on u.id = canal.author_id
+                        where u.username = :user';
+
+                       
+    $resul = $con->prepare($query);
+      $a=  $resul->execute(array("user" => $author));
+    return $a->fetchAllAssociative();
+
 
         }
 }

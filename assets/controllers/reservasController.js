@@ -1,12 +1,17 @@
 $(function(){
     const $ = require('jquery');
 
-    Canal = $('select[name="Rutina[Canal]"]');
+    $(" #Rutina_Canal-ts-control >.item").on('change', ()=>{
+        PCanal = $(" #Rutina_Canal-ts-control >.item").text();
+        //     $.get("https://localhost:8000/canal/precio" + PCanal, 
+        //     function (data, textStatus, jqXHR) {
+                
+        //     },
+        //     "dataType"
+        // );
+        alert(PCanal);
+        
+    });
     
-    $.get("https://localhost:8000/canal/precio", data,
-        function (data, textStatus, jqXHR) {
-            
-        },
-        "dataType"
-    );
+
 })
