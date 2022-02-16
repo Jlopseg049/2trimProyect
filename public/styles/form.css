@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap');
+body{
+    overflow-x: hidden;
+}
+
 .form-container{ font-family: 'Overpass', sans-serif; }
 .form-container .form-horizontal{
     background: linear-gradient(to right,#202926 49%,#15201C 50%);
@@ -10,7 +15,7 @@
 .form-container .title{
     color: #838585;
     font-family: 'Teko', sans-serif;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
@@ -60,25 +65,37 @@
 .form-horizontal .btn{
     color: rgba(255,255,255,0.8);
     background: #7cc576;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 17.5px;
+    font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: 1px;
     width: 120px;
     height: 120px;
-    line-height: 120px;
-    margin: 0 0 15px 0;
+    line-height: 50px;
+    margin: 0 0 0;
     border: none;
     border-radius: 50%;
     display: inline-block;
     transform: translateX(30px);
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
 }
 .form-horizontal .btn:hover,
 .form-horizontal .btn:focus{
+
+    transform: translatey(-4px);
+
+    
     color: #fff;
     letter-spacing: 4px;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+body{
+    background-color: #7aaf75;
+}
+.navbar{
+    height: 150%;
+    margin-bottom: 14%;
+    background-color: rgb(219, 224, 220);
 }
 .form-horizontal .forgot-pass{
     font-size: 12px;

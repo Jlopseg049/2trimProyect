@@ -24,4 +24,4 @@ services:
     # please note that last definitions always *replace* previous ones
     App\EventSubscriber\EasyAdminSubscriber:
             tags:
-                - { name: kernel.event_listener, event: kernel.exception }
+                - { name: kernel.event_listener}
