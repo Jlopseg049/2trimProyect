@@ -343,6 +343,7 @@
     </service>
     <service id="App\DataFixtures\BaseFixtures" class="App\DataFixtures\BaseFixtures" autowire="true" autoconfigure="true"/>
     <service id="App\DataFixtures\UserFixtures" class="App\DataFixtures\UserFixtures" autowire="true" autoconfigure="true"/>
+    <service id="App\EventSuscriber\EasyAdminSuscriber" class="App\EventSuscriber\EasyAdminSuscriber" autowire="true" autoconfigure="true"/>
     <service id="App\Form\CanalType" class="App\Form\CanalType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -380,6 +381,12 @@
     </service>
     <service id="App\Security\UserAuthenticator" class="App\Security\UserAuthenticator" autowire="true" autoconfigure="true">
       <argument type="service" id="router.default"/>
+    </service>
+    <service id="App\EventSubscriber\EasyAdminSubscriber" class="App\EventSubscriber\EasyAdminSubscriber" autowire="true" autoconfigure="true">
+      <tag name="kernel.event_listener" event="kernel.exception"/>
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument type="service" id="security.user_password_hasher"/>
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="response_listener" class="Symfony\Component\HttpKernel\EventListener\ResponseListener">
@@ -2267,6 +2274,14 @@
       <call method="addListener">
         <argument>kernel.exception</argument>
         <argument type="collection">
+          <argument type="service_closure" id="App\EventSubscriber\EasyAdminSubscriber"/>
+          <argument>onKernelException</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.exception</argument>
+        <argument type="collection">
           <argument type="service_closure" id="webpack_encore.exception_listener"/>
           <argument>onKernelException</argument>
         </argument>
@@ -2301,6 +2316,22 @@
         <argument type="collection">
           <argument type="service_closure" id="EasyCorp\Bundle\EasyAdminBundle\EventListener\CrudResponseListener"/>
           <argument>onKernelView</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityPersistedEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="App\EventSubscriber\EasyAdminSubscriber"/>
+          <argument>addUser</argument>
+        </argument>
+        <argument>0</argument>
+      </call>
+      <call method="addListener">
+        <argument>EasyCorp\Bundle\EasyAdminBundle\Event\BeforeEntityUpdatedEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="App\EventSubscriber\EasyAdminSubscriber"/>
+          <argument>updateUser</argument>
         </argument>
         <argument>0</argument>
       </call>
@@ -6263,6 +6294,8 @@
     <service id=".abstract.instanceof.App\Repository\RutinaRepository" class="App\Repository\RutinaRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\EventDispatcher\EventSubscriberInterface.0.App\EventSubscriber\EasyAdminSubscriber" class="App\EventSubscriber\EasyAdminSubscriber" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\EventSubscriber\EasyAdminSubscriber" class="App\EventSubscriber\EasyAdminSubscriber" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Filter\FilterConfiguratorInterface.0.EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" class="EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" abstract="true"/>
     <service id=".abstract.instanceof.EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" class="EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\ChoiceConfigurator" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Filter\FilterConfiguratorInterface.0.EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\CommonConfigurator" class="EasyCorp\Bundle\EasyAdminBundle\Filter\Configurator\CommonConfigurator" abstract="true"/>
