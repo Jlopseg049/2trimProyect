@@ -19,7 +19,7 @@ class ReservaType extends AbstractType
                 'required' => true
 
             ])
-            ->add('fechaFin'    , DateTimeType::class,[
+            ->add('fechaFin',    DateTimeType::class,[
                 'widget'=>'single_text',
                 'required' => true
             ])

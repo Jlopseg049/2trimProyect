@@ -19,6 +19,7 @@ class UserFixture extends BaseFixture
             $user->setName(     $this->faker->Name);
             $user->setAp1(      $this->faker->Ap1);
             $user->setAp2(      $this->faker->Ap2);
+            $user->setPassword( $this->faker->password);
 
             return $user;
         });
