@@ -948,6 +948,6 @@ class __TwigTemplate_7fcafd8fa38771d648bb14c1e58972f4 extends Template
             </div>
         </div>
     </section>
-", "index/bodyIndex.html.twig", "C:\\Users\\alumno\\Desktop\\symfony\\templates\\index\\bodyIndex.html.twig");
+", "index/bodyIndex.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\templates\\index\\bodyIndex.html.twig");
     }
 }

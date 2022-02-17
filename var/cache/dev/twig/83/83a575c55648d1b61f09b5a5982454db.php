@@ -66,6 +66,6 @@ class __TwigTemplate_86efefb9da74105b844ad17601bc9ef1 extends Template
 {# @var field \\EasyCorp\\Bundle\\EasyAdminBundle\\Dto\\FieldDto #}
 {# @var entity \\EasyCorp\\Bundle\\EasyAdminBundle\\Dto\\EntityDto #}
 {{ field.formattedValue }}
-", "@EasyAdmin/crud/field/percent.html.twig", "C:\\Users\\alumno\\Desktop\\symfony\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\percent.html.twig");
+", "@EasyAdmin/crud/field/percent.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\percent.html.twig");
     }
 }

@@ -164,6 +164,6 @@ class __TwigTemplate_825945d01773310c1ad0aa3c2e80f652 extends Template
         </div>
     </header>
 
-", "index/headerIndex.html.twig", "C:\\Users\\alumno\\Desktop\\symfony\\templates\\index\\headerIndex.html.twig");
+", "index/headerIndex.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\templates\\index\\headerIndex.html.twig");
     }
 }

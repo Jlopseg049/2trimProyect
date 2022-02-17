@@ -151,6 +151,6 @@ class __TwigTemplate_7a515cfbef4992d4e621b404eb637a5e extends Template
   </footer><!-- End Footer -->
 
   <a href=\"#\" class=\"back-to-top d-flex align-items-center justify-content-center\"><i class=\"bi bi-arrow-up-short\"></i></a>
-", "index/footerIndex.html.twig", "C:\\Users\\alumno\\Desktop\\symfony\\templates\\index\\footerIndex.html.twig");
+", "index/footerIndex.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\templates\\index\\footerIndex.html.twig");
     }
 }

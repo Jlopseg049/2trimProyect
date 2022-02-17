@@ -66,6 +66,6 @@ class __TwigTemplate_c43332d4020932441adfde1b29d4046f extends Template
 {# @var field \\EasyCorp\\Bundle\\EasyAdminBundle\\Dto\\FieldDto #}
 {# @var entity \\EasyCorp\\Bundle\\EasyAdminBundle\\Dto\\EntityDto #}
 {{ field.formattedValue }}
-", "@EasyAdmin/crud/field/number.html.twig", "C:\\Users\\alumno\\Desktop\\symfony\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\number.html.twig");
+", "@EasyAdmin/crud/field/number.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\number.html.twig");
     }
 }

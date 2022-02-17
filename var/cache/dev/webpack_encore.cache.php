@@ -13,17 +13,14 @@ return [[
         'app' => [
             'js' => [
                 '/build/runtime.js',
-                '/build/vendors-node_modules_jquery_dist_jquery_js.js',
+                '/build/vendors~app~calculaPrecio.js',
                 '/build/app.js',
-            ],
-            'css' => [
-                '/build/app.css',
             ],
         ],
         'calculaPrecio' => [
             'js' => [
                 '/build/runtime.js',
-                '/build/vendors-node_modules_jquery_dist_jquery_js.js',
+                '/build/vendors~app~calculaPrecio.js',
                 '/build/calculaPrecio.js',
             ],
         ],

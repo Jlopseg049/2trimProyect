@@ -107,6 +107,6 @@ class __TwigTemplate_2613d21cc53c34ce839faf39f64b33f3 extends Template
 
     {{ form_widget(filters_form) }}
 {{ form_end(filters_form) }}
-", "@EasyAdmin/crud/filters.html.twig", "C:\\Users\\alumno\\Desktop\\symfony\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\filters.html.twig");
+", "@EasyAdmin/crud/filters.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\filters.html.twig");
     }
 }

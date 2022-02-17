@@ -85,6 +85,6 @@ class __TwigTemplate_bb4c23f3d956510a8da2a2456fd9560f extends Template
 {% if field.customOptions.get('showName') %}
     {{ field.formattedValue ?? '' }}
 {% endif %}
-", "@EasyAdmin/crud/field/locale.html.twig", "C:\\Users\\alumno\\Desktop\\symfony\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\locale.html.twig");
+", "@EasyAdmin/crud/field/locale.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\locale.html.twig");
     }
 }

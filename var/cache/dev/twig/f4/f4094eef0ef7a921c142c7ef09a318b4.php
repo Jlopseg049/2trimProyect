@@ -136,6 +136,6 @@ class __TwigTemplate_ea21d330a4c99b7a4771b42ac5d31c53 extends Template
     </ul>
 </div>
 {% endblock %}
-", "rutina/index.html.twig", "C:\\Users\\alumno\\Desktop\\symfony\\templates\\rutina\\index.html.twig");
+", "rutina/index.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\templates\\rutina\\index.html.twig");
     }
 }

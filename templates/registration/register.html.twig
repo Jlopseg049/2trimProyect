@@ -1,17 +1,32 @@
             {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}
+    <title>Creative Colorlib SignUp Form</title>
+{% endblock %}
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% endblock %}
+{% block javascripts %}
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+{% endblock %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="{{ asset('styles/bootstrap.min.css') }}" type="text/css">
+
+<!-- Custom Theme files -->
+<link href="{{asset('styles/register.css')}}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
 {% endblock %}
 {% block body %}
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
     <div class="container">
-    <h1>Register</h1>
 
-    {{ form_start(registrationForm,{'attr':{'class':'form-control'}}) }}
+    {# {{ form_start(registrationForm,{'attr':{'class':'form-control'}}) }}
         {{ form_row(registrationForm.email,{'attr':{'class':'form-control'}}) }}
         {{ form_row(registrationForm.username,{'attr':{'class':'form-control'}}) }}
 
@@ -26,7 +41,46 @@
 
         <button type="submit" class="btn btn-success">Register</button>
     {{ form_end(registrationForm) }}
-    </div>
+    </div> #}
+
+
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<h1>Registro</h1>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+                    {{ form_start(registrationForm,{'attr':{'class':'form-control'}}) }}
+                            {{ form_widget(registrationForm.email,{'attr':{'class':'form-control text email'}}) }}
+                            {{ form_widget(registrationForm.username,{'attr':{'class':'form-control text'}}) }}
+                            {{ form_widget(registrationForm.name,{'attr':{'class':'form-control text'}}) }}
+                            {{ form_widget(registrationForm.ap1,{'attr':{'class':'form-control text'}}) }}
+                            {{ form_widget(registrationForm.ap2,{'attr':{'class':'form-control text'}}) }}
+                            {{ form_widget(registrationForm.password.first, {'attr':{'class':'form-control text w3lpass'}}) }}
+                            {{ form_widget(registrationForm.password.second, {'attr':{'class':'form-control text w3lpass'}}) }}
+                            {{ form_widget(registrationForm.agreeTerms,{'attr':{'class':'form-check checkbox'}}) }}
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="SIGNUP">
+    {{ form_end(registrationForm) }}
+				<p>Don't have an Account? <a href="login"> Login Now!</a></p>
+			</div>
+		</div>
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+</body>
+</html>
 {% endblock %}
 
 
