@@ -128,8 +128,8 @@ class __TwigTemplate_772d33b487ac0be14fb0e94f5611c7ae extends Template
                     <a class=\"nav-link disabled\" href=\"#\">Disabled</a>
                 </li>
                 </ul>
-                <form class=\"form-inline my-2 my-lg-0\">
-                <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
+                <form action=\"#\" method=\"get\" class=\"form-inline my-2 my-lg-0\">
+                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">
                 <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
                 </form>
             </div>
@@ -269,8 +269,8 @@ class __TwigTemplate_772d33b487ac0be14fb0e94f5611c7ae extends Template
                     <a class=\"nav-link disabled\" href=\"#\">Disabled</a>
                 </li>
                 </ul>
-                <form class=\"form-inline my-2 my-lg-0\">
-                <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
+                <form action=\"#\" method=\"get\" class=\"form-inline my-2 my-lg-0\">
+                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">
                 <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
                 </form>
             </div>

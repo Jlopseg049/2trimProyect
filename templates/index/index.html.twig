@@ -25,6 +25,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('css/style.css')}}" rel="stylesheet">
+
   <!-- Template Main CSS File -->
 
   <!-- =======================================================
@@ -55,12 +56,22 @@
 
       <nav id="navbar" class="navbar">
         <ul>
+          <li>
+            <div class=" input-group ml-2">
+              <input type="text" id="buscador"class="nav-link form-control" placeholder="Escribe aquí..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-success h-100" type="submit">Ver Canales</button>
+              </div>
+            </div>
+          </li>
+
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -784,7 +795,12 @@
   <script src="{{asset('vendor/swiper/swiper-bundle.min.js')}}"></script>
 
   <!-- Template Main JS File -->
-  <script src="{{asset('js/main.js')}}"></script>
+<script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('js/search.js')}}"></script>
+    <script src="{{asset('js/canales.js')}}"></script>
+
+
 </body>
 
 </html>

@@ -91,6 +91,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
         // line 27
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">
+
   <!-- Template Main CSS File -->
 
   <!-- =======================================================
@@ -106,7 +107,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
   <section id=\"hero\">
     <div class=\"hero-container\">
       <!-- <a href=\"index.html\" class=\"hero-logo\" data-aos=\"zoom-in\"><img src=\"";
-        // line 42
+        // line 43
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/hero-logo.png"), "html", null, true);
         echo "\" alt=\"\"></a> -->
       <h1 data-aos=\"zoom-in\">Welcome To StromZu</h1>
@@ -120,19 +121,29 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
 
       <div class=\"logo\">
         <!-- <a href=\"index.html\"><img src=\"";
-        // line 53
+        // line 54
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
         echo "\" alt=\"\" class=\"img-fluid\"></a> -->
       </div>
 
       <nav id=\"navbar\" class=\"navbar\">
         <ul>
+          <li>
+            <div class=\" input-group ml-2\">
+              <input type=\"text\" id=\"buscador\"class=\"nav-link form-control\" placeholder=\"Escribe aquí...\" aria-label=\"Recipient's username\" aria-describedby=\"basic-addon2\">
+              <div class=\"input-group-append\">
+                <button class=\"btn btn-outline-success h-100\" type=\"submit\">Ver Canales</button>
+              </div>
+            </div>
+          </li>
+
           <li><a class=\"nav-link scrollto active\" href=\"#hero\">Home</a></li>
           <li><a class=\"nav-link scrollto\" href=\"#about\">About</a></li>
           <li><a class=\"nav-link scrollto\" href=\"#services\">Services</a></li>
           <li><a class=\"nav-link scrollto \" href=\"#portfolio\">Portfolio</a></li>
           <li><a class=\"nav-link scrollto\" href=\"#team\">Team</a></li>
           <li><a class=\"nav-link scrollto\" href=\"#pricing\">Pricing</a></li>
+
           <!-- <li class=\"dropdown\"><a href=\"#\"><span>Drop Down</span> <i class=\"bi bi-chevron-down\"></i></a>
             <ul>
               <li><a href=\"#\">Drop Down 1</a></li>
@@ -152,19 +163,19 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           </li> -->
 
           ";
-        // line 82
+        // line 93
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
-            // line 83
+            // line 94
             echo "              <li><a class=\"nav-link\" href=\"logout\">Cerrar Sesión</a></li>
               ";
         } else {
-            // line 85
+            // line 96
             echo "              <li><a class=\"nav-link\" href=\"login\">Iniciar Sesión</a></li>
               <li><a class=\"nav-link\" href=\"register\">Registrarse</a></li>
 
           ";
         }
-        // line 89
+        // line 100
         echo "        </ul>
         <i class=\"bi bi-list mobile-nav-toggle\"></i>
       </nav><!-- .navbar -->
@@ -187,7 +198,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-6\" data-aos=\"fade-right\">
             <div class=\"image\">
               <img src=\"";
-        // line 110
+        // line 121
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/about.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
             </div>
@@ -249,7 +260,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
             </div>
           </div>
           <div class=\"image col-lg-6 order-1 order-lg-2\" style='background-image: url(\"";
-        // line 169
+        // line 180
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/services.jpg"), "html", null, true);
         echo "\");' data-aos=\"fade-left\" data-aos-delay=\"100\"></div>
         </div>
@@ -267,7 +278,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
               <div class=\"tab-pane active show\" id=\"tab-1\">
                 <figure>
                   <img src=\"";
-        // line 184
+        // line 195
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/featured-1.png"), "html", null, true);
         echo "\" alt=\"\" class=\"img-fluid\">
                 </figure>
@@ -275,7 +286,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
               <div class=\"tab-pane\" id=\"tab-2\">
                 <figure>
                   <img src=\"";
-        // line 189
+        // line 200
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/featured-2.png"), "html", null, true);
         echo "\" alt=\"\" class=\"img-fluid\">
                 </figure>
@@ -283,7 +294,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
               <div class=\"tab-pane\" id=\"tab-3\">
                 <figure>
                   <img src=\"";
-        // line 194
+        // line 205
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/featured-3.png"), "html", null, true);
         echo "\" alt=\"\" class=\"img-fluid\">
                 </figure>
@@ -291,7 +302,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
               <div class=\"tab-pane\" id=\"tab-4\">
                 <figure>
                   <img src=\"";
-        // line 199
+        // line 210
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/featured-4.png"), "html", null, true);
         echo "\" alt=\"\" class=\"img-fluid\">
                 </figure>
@@ -381,7 +392,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           </div>
 
           <div class=\"col-lg-5 order-1 order-lg-2 align-items-stretch video-box\" style='background-image: url(\"";
-        // line 286
+        // line 297
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/why-us.jpg"), "html", null, true);
         echo "\");' data-aos=\"zoom-in\">
             <a href=\"https://www.youtube.com/watch?v=LIqQNG_q2us\" class=\"venobox play-btn mb-4\" data-vbtype=\"video\" data-autoplay=\"true\"></a>
@@ -417,7 +428,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-4 col-md-6 portfolio-item filter-app\">
             <div class=\"portfolio-wrap\">
               <img src=\"";
-        // line 319
+        // line 330
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-1.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
               <div class=\"portfolio-info\">
@@ -425,7 +436,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                 <p>App</p>
                 <div class=\"portfolio-links\">
                   <a href=\"";
-        // line 324
+        // line 335
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-1.jpg"), "html", null, true);
         echo "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"App 1\"><i class=\"bx bx-plus\"></i></a>
                   <a href=\"portfolio-details.html\" title=\"More Details\"><i class=\"bx bx-link\"></i></a>
@@ -437,7 +448,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-4 col-md-6 portfolio-item filter-web\">
             <div class=\"portfolio-wrap\">
               <img src=\"";
-        // line 333
+        // line 344
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-2.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
               <div class=\"portfolio-info\">
@@ -445,7 +456,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                 <p>Web</p>
                 <div class=\"portfolio-links\">
                   <a href=\"";
-        // line 338
+        // line 349
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-2.jpg"), "html", null, true);
         echo "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Web 3\"><i class=\"bx bx-plus\"></i></a>
                   <a href=\"portfolio-details.html\" title=\"More Details\"><i class=\"bx bx-link\"></i></a>
@@ -457,7 +468,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-4 col-md-6 portfolio-item filter-app\">
             <div class=\"portfolio-wrap\">
               <img src=\"";
-        // line 347
+        // line 358
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-3.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
               <div class=\"portfolio-info\">
@@ -465,7 +476,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                 <p>App</p>
                 <div class=\"portfolio-links\">
                   <a href=\"";
-        // line 352
+        // line 363
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-3.jpg"), "html", null, true);
         echo "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"App 2\"><i class=\"bx bx-plus\"></i></a>
                   <a href=\"portfolio-details.html\" title=\"More Details\"><i class=\"bx bx-link\"></i></a>
@@ -477,7 +488,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-4 col-md-6 portfolio-item filter-card\">
             <div class=\"portfolio-wrap\">
               <img src=\"";
-        // line 361
+        // line 372
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-4.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
               <div class=\"portfolio-info\">
@@ -485,7 +496,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                 <p>Card</p>
                 <div class=\"portfolio-links\">
                   <a href=\"";
-        // line 366
+        // line 377
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-4.jpg"), "html", null, true);
         echo "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 2\"><i class=\"bx bx-plus\"></i></a>
                   <a href=\"portfolio-details.html\" title=\"More Details\"><i class=\"bx bx-link\"></i></a>
@@ -497,7 +508,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-4 col-md-6 portfolio-item filter-web\">
             <div class=\"portfolio-wrap\">
               <img src=\"";
-        // line 375
+        // line 386
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-5.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
               <div class=\"portfolio-info\">
@@ -505,7 +516,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                 <p>Web</p>
                 <div class=\"portfolio-links\">
                   <a href=\"";
-        // line 380
+        // line 391
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-5.jpg"), "html", null, true);
         echo "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Web 2\"><i class=\"bx bx-plus\"></i></a>
                   <a href=\"portfolio-details.html\" title=\"More Details\"><i class=\"bx bx-link\"></i></a>
@@ -517,7 +528,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-4 col-md-6 portfolio-item filter-app\">
             <div class=\"portfolio-wrap\">
               <img src=\"";
-        // line 389
+        // line 400
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-6.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
               <div class=\"portfolio-info\">
@@ -525,7 +536,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                 <p>App</p>
                 <div class=\"portfolio-links\">
                   <a href=\"";
-        // line 394
+        // line 405
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-6.jpg"), "html", null, true);
         echo "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"App 3\"><i class=\"bx bx-plus\"></i></a>
                   <a href=\"portfolio-details.html\" title=\"More Details\"><i class=\"bx bx-link\"></i></a>
@@ -537,7 +548,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-4 col-md-6 portfolio-item filter-card\">
             <div class=\"portfolio-wrap\">
               <img src=\"";
-        // line 403
+        // line 414
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-7.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
               <div class=\"portfolio-info\">
@@ -545,7 +556,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                 <p>Card</p>
                 <div class=\"portfolio-links\">
                   <a href=\"";
-        // line 408
+        // line 419
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-7.jpg"), "html", null, true);
         echo "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 1\"><i class=\"bx bx-plus\"></i></a>
                   <a href=\"portfolio-details.html\" title=\"More Details\"><i class=\"bx bx-link\"></i></a>
@@ -557,7 +568,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-4 col-md-6 portfolio-item filter-card\">
             <div class=\"portfolio-wrap\">
               <img src=\"";
-        // line 417
+        // line 428
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-8.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
               <div class=\"portfolio-info\">
@@ -565,7 +576,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                 <p>Card</p>
                 <div class=\"portfolio-links\">
                   <a href=\"";
-        // line 422
+        // line 433
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-8.jpg"), "html", null, true);
         echo "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Card 3\"><i class=\"bx bx-plus\"></i></a>
                   <a href=\"portfolio-details.html\" title=\"More Details\"><i class=\"bx bx-link\"></i></a>
@@ -577,7 +588,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
           <div class=\"col-lg-4 col-md-6 portfolio-item filter-web\">
             <div class=\"portfolio-wrap\">
               <img src=\"";
-        // line 431
+        // line 442
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-9.jpg"), "html", null, true);
         echo "\" class=\"img-fluid\" alt=\"\">
               <div class=\"portfolio-info\">
@@ -585,7 +596,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                 <p>Web</p>
                 <div class=\"portfolio-links\">
                   <a href=\"";
-        // line 436
+        // line 447
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/portfolio/portfolio-9.jpg"), "html", null, true);
         echo "\" data-gallery=\"portfolioGallery\" class=\"portfolio-lightbox\" title=\"Web 3\"><i class=\"bx bx-plus\"></i></a>
                   <a href=\"portfolio-details.html\" title=\"More Details\"><i class=\"bx bx-link\"></i></a>
@@ -615,7 +626,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                   Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
                 </p>
                 <img src=\"";
-        // line 463
+        // line 474
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/testimonials/testimonials-1.jpg"), "html", null, true);
         echo "\" class=\"testimonial-img\" alt=\"\">
                 <h3>Saul Goodman</h3>
@@ -629,7 +640,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                   Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                 </p>
                 <img src=\"";
-        // line 474
+        // line 485
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/testimonials/testimonials-2.jpg"), "html", null, true);
         echo "\" class=\"testimonial-img\" alt=\"\">
                 <h3>Sara Wilsson</h3>
@@ -643,7 +654,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                   Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                 </p>
                 <img src=\"";
-        // line 485
+        // line 496
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/testimonials/testimonials-3.jpg"), "html", null, true);
         echo "\" class=\"testimonial-img\" alt=\"\">
                 <h3>Jena Karlis</h3>
@@ -657,7 +668,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                   Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
                 </p>
                 <img src=\"";
-        // line 496
+        // line 507
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/testimonials/testimonials-4.jpg"), "html", null, true);
         echo "\" class=\"testimonial-img\" alt=\"\">
                 <h3>Matt Brandon</h3>
@@ -671,7 +682,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
                   Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
                 </p>
                 <img src=\"";
-        // line 507
+        // line 518
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/testimonials/testimonials-5.jpg"), "html", null, true);
         echo "\" class=\"testimonial-img\" alt=\"\">
                 <h3>John Larson</h3>
@@ -905,7 +916,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
         <div class=\"row justify-content-center\">
           <div class=\"col-lg-6\">
             <a href=\"#header\" class=\"scrollto footer-logo\"><img src=\"";
-        // line 738
+        // line 749
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/hero-logo.png"), "html", null, true);
         echo "\" alt=\"\"></a>
             <h3>Knight</h3>
@@ -949,35 +960,49 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
 
   <!-- Vendor JS Files -->
    <script src=\"";
-        // line 779
+        // line 790
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/aos/aos.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 780
+        // line 791
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 781
+        // line 792
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/glightbox/js/glightbox.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 782
+        // line 793
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/isotope-layout/isotope.pkgd.min.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 783
+        // line 794
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/php-email-form/validate.js"), "html", null, true);
         echo "\"></script>
   <script src=\"";
-        // line 784
+        // line 795
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/swiper/swiper-bundle.min.js"), "html", null, true);
         echo "\"></script>
 
   <!-- Template Main JS File -->
-  <script src=\"";
-        // line 787
+<script src=\"";
+        // line 798
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.3.1.min.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 799
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
+    <script src=\"";
+        // line 800
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/search.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 801
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/canales.js"), "html", null, true);
+        echo "\"></script>
+
+
 </body>
 
 </html>
@@ -999,7 +1024,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
 
     public function getDebugInfo()
     {
-        return array (  979 => 787,  973 => 784,  969 => 783,  965 => 782,  961 => 781,  957 => 780,  953 => 779,  909 => 738,  675 => 507,  661 => 496,  647 => 485,  633 => 474,  619 => 463,  589 => 436,  581 => 431,  569 => 422,  561 => 417,  549 => 408,  541 => 403,  529 => 394,  521 => 389,  509 => 380,  501 => 375,  489 => 366,  481 => 361,  469 => 352,  461 => 347,  449 => 338,  441 => 333,  429 => 324,  421 => 319,  385 => 286,  295 => 199,  287 => 194,  279 => 189,  271 => 184,  253 => 169,  191 => 110,  168 => 89,  162 => 85,  158 => 83,  156 => 82,  124 => 53,  110 => 42,  92 => 27,  86 => 24,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  57 => 13,  53 => 12,  40 => 1,);
+        return array (  1002 => 801,  998 => 800,  994 => 799,  990 => 798,  984 => 795,  980 => 794,  976 => 793,  972 => 792,  968 => 791,  964 => 790,  920 => 749,  686 => 518,  672 => 507,  658 => 496,  644 => 485,  630 => 474,  600 => 447,  592 => 442,  580 => 433,  572 => 428,  560 => 419,  552 => 414,  540 => 405,  532 => 400,  520 => 391,  512 => 386,  500 => 377,  492 => 372,  480 => 363,  472 => 358,  460 => 349,  452 => 344,  440 => 335,  432 => 330,  396 => 297,  306 => 210,  298 => 205,  290 => 200,  282 => 195,  264 => 180,  202 => 121,  179 => 100,  173 => 96,  169 => 94,  167 => 93,  125 => 54,  111 => 43,  92 => 27,  86 => 24,  82 => 23,  78 => 22,  74 => 21,  70 => 20,  66 => 19,  57 => 13,  53 => 12,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -1031,6 +1056,7 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
 
   <!-- Template Main CSS File -->
   <link href=\"{{asset('css/style.css')}}\" rel=\"stylesheet\">
+
   <!-- Template Main CSS File -->
 
   <!-- =======================================================
@@ -1061,12 +1087,22 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
 
       <nav id=\"navbar\" class=\"navbar\">
         <ul>
+          <li>
+            <div class=\" input-group ml-2\">
+              <input type=\"text\" id=\"buscador\"class=\"nav-link form-control\" placeholder=\"Escribe aquí...\" aria-label=\"Recipient's username\" aria-describedby=\"basic-addon2\">
+              <div class=\"input-group-append\">
+                <button class=\"btn btn-outline-success h-100\" type=\"submit\">Ver Canales</button>
+              </div>
+            </div>
+          </li>
+
           <li><a class=\"nav-link scrollto active\" href=\"#hero\">Home</a></li>
           <li><a class=\"nav-link scrollto\" href=\"#about\">About</a></li>
           <li><a class=\"nav-link scrollto\" href=\"#services\">Services</a></li>
           <li><a class=\"nav-link scrollto \" href=\"#portfolio\">Portfolio</a></li>
           <li><a class=\"nav-link scrollto\" href=\"#team\">Team</a></li>
           <li><a class=\"nav-link scrollto\" href=\"#pricing\">Pricing</a></li>
+
           <!-- <li class=\"dropdown\"><a href=\"#\"><span>Drop Down</span> <i class=\"bi bi-chevron-down\"></i></a>
             <ul>
               <li><a href=\"#\">Drop Down 1</a></li>
@@ -1790,7 +1826,12 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
   <script src=\"{{asset('vendor/swiper/swiper-bundle.min.js')}}\"></script>
 
   <!-- Template Main JS File -->
-  <script src=\"{{asset('js/main.js')}}\"></script>
+<script src=\"{{asset('js/jquery-3.3.1.min.js')}}\"></script>
+    <script src=\"{{asset('js/main.js')}}\"></script>
+    <script src=\"{{asset('js/search.js')}}\"></script>
+    <script src=\"{{asset('js/canales.js')}}\"></script>
+
+
 </body>
 
 </html>

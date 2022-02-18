@@ -50,17 +50,41 @@ class CanalRepository extends ServiceEntityRepository
 
     public function findPrecioByAuthor(string $author)
     {
-    $con = $this->getEntityManager()->getConnection();
+        $con = $this->getEntityManager()->getConnection();
 
-    $query ='select canal.precio from canal
-                            join "user" u on u.id = canal.author_id
-                        where u.username = :user';
+        $query ='select canal.precio from canal
+                                join "user" u on u.id = canal.author_id
+                            where u.username = :user';
 
-                       
-    $resul = $con->prepare($query);
-      $a=  $resul->execute(array("user" => $author));
-    return $a->fetchAllAssociative();
+                        
+        $resul = $con->prepare($query);
+        $ª=  $resul->execute(array("user" => $author));
+        return $ª->fetchAllAssociative();
 
 
-        }
+    }
+    public function findCanalByAuthor(string $author)
+    {
+        $con = $this->getEntityManager()->getConnection();
+        $author= "'".$author."%'";
+        $query ='select canal.id, canal.nombre, u.username from canal
+                    join "user" u on u.id = canal.author_id
+                where u.username like '. $author;
+        $resul = $con->prepare($query);
+        $ª=  $resul->execute();
+        return $ª->fetchAllAssociative();
+
+    }
+
+    public function findCanalByAll()
+    {
+        $con = $this->getEntityManager()->getConnection();
+        
+        $query ='select canal.id, canal.nombre, u.username from canal
+                    join "user" u on u.id = canal.author_id';
+        $resul = $con->prepare($query);
+        $ª=  $resul->execute();
+        return $ª->fetchAllAssociative();
+
+    }
 }
