@@ -827,6 +827,8 @@ section {
 }
 
 .portfolio .portfolio-wrap {
+  height: 30vh;
+
   transition: 0.3s;
   position: relative;
   overflow: hidden;
@@ -1348,7 +1350,6 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: #7cc576;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -1710,4 +1711,29 @@ section {
   text-align: center;
   font-size: 13px;
   padding-top: 5px;
+}
+
+.btn-outline-success{
+  color: #7cc576            !important;
+  border: #7cc576 2px solid !important;
+  transition: all 0.4s;
+}
+body{
+  overflow-x: hidden;
+}
+.altoMain{
+  min-height: 100vh;
+
+}
+.nav{
+  justify-content: center;
+}
+.btn-outline-success:hover{
+  background-color: #7cc576 !important;
+  color: #fff               !important;
+}
+#profileImg {
+  max-height: 60px;
+  max-width: 60px;
+  border-radius:100px ;
 }

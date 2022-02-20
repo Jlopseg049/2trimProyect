@@ -9,7 +9,7 @@ return [
     false, // $matchHost
     [ // $staticRoutes
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\Admin\\DashboardController::index'], null, null, null, false, false, null]],
-        '/canal/find' => [[['_route' => 'CanalAll_show', '_controller' => 'App\\Controller\\CanalController::findCanalByAll'], null, null, null, false, false, null]],
+        '/canal/findAll' => [[['_route' => 'CanalAll_show', '_controller' => 'App\\Controller\\CanalController::findCanalByAll'], null, null, null, false, false, null]],
         '/index' => [[['_route' => 'prueba', '_controller' => 'App\\Controller\\IndexController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],

@@ -67,7 +67,7 @@ class CanalRepository extends ServiceEntityRepository
     {
         $con = $this->getEntityManager()->getConnection();
         $author= "'".$author."%'";
-        $query ='select canal.id, canal.nombre, u.username from canal
+        $query ='select canal.id, canal.nombre, u.username, u.foto from canal
                     join "user" u on u.id = canal.author_id
                 where u.username like '. $author;
         $resul = $con->prepare($query);
@@ -80,7 +80,7 @@ class CanalRepository extends ServiceEntityRepository
     {
         $con = $this->getEntityManager()->getConnection();
         
-        $query ='select canal.id, canal.nombre, u.username from canal
+        $query ='select canal.id, canal.nombre, u.username, u.foto from canal
                     join "user" u on u.id = canal.author_id';
         $resul = $con->prepare($query);
         $ª=  $resul->execute();

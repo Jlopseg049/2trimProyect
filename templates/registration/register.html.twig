@@ -52,12 +52,17 @@
                     {{ form_start(registrationForm,{'attr':{'class':'form-control'}}) }}
                             {{ form_widget(registrationForm.email,{'attr':{'class':'form-control text email'}}) }}
                             {{ form_widget(registrationForm.username,{'attr':{'class':'form-control text'}}) }}
+                            {{ form_widget(registrationForm.foto,{'attr':{'class':'form-control img'}}) }}
                             {{ form_widget(registrationForm.name,{'attr':{'class':'form-control text'}}) }}
                             {{ form_widget(registrationForm.ap1,{'attr':{'class':'form-control text'}}) }}
                             {{ form_widget(registrationForm.ap2,{'attr':{'class':'form-control text'}}) }}
                             {{ form_widget(registrationForm.password.first, {'attr':{'class':'form-control text w3lpass'}}) }}
                             {{ form_widget(registrationForm.password.second, {'attr':{'class':'form-control text w3lpass'}}) }}
+                    <div class="wthree-text">             
+                        <label class="anim">
                             {{ form_widget(registrationForm.agreeTerms,{'attr':{'class':'form-check checkbox'}}) }}
+							<span>I Agree To The Terms & Conditions</span>
+						</label>
 						<div class="clear"> </div>
 					</div>
 					<input type="submit" value="SIGNUP">

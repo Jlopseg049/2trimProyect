@@ -4,13 +4,14 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\FormBuilderInterface; 
+use Symfony\Component\Validator\Constraints\IsTrue;
+use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Validator\Constraints\IsTrue;
-use Symfony\Component\Form\FormBuilderInterface; 
 
 class RegistrationFormType extends AbstractType
 {
@@ -20,6 +21,8 @@ class RegistrationFormType extends AbstractType
             // ->add('Foto')
             ->add('email',       TextType::class, array('label' => 'Correo',             'attr' => array('class' => 'input-control'
                                 ,'placeholder' => 'Correo')))
+            ->add('foto',        FileType::class, ['label' => 'Seleccione una foto de perfil',
+                                'required' => false])
             
             ->add('username',    TextType::class, array('label' => 'Nombre de Usuario',  'attr' => array('class' => 'input-control'
                                 ,'placeholder' => 'username')))
@@ -63,8 +66,8 @@ class RegistrationFormType extends AbstractType
                 'invalid_message' => 'Deben coincidir las contraseñas.',
                 'options' => ['attr' => ['class' => 'password-field']],
                 'required' => true,
-                'first_options'  => ['label' => 'Password'],
-                'second_options' => ['label' => 'Repeat Password']
+                'first_options'  => ['label' => 'Password','attr'=>  ['placeholder' => 'Password']],
+                'second_options' => ['label' => 'Repeat Password','attr' =>['placeholder' =>  'Repeat Password'] ]
             ]);
     }
 

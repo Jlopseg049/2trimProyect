@@ -11,7 +11,7 @@
   <!-- Favicons -->
   <link href="{{asset('img/favicon.png')}}" rel="icon">
   <link href="{{asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
-
+<script src="https://kit.fontawesome.com/a8b39d6af2.js" crossorigin="anonymous"></script>
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -24,16 +24,10 @@
   <link href="{{asset('vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="{{asset('css/style.css')}}" rel="stylesheet">
+  <link href="{{asset('styles/style.css')}}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
 
-  <!-- =======================================================
-  * Template Name: Knight - v4.3.0
-  * Template URL: https://bootstrapmade.com/knight-free-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 <body>
 
@@ -57,10 +51,9 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li>
-            <div class=" input-group ml-2">
-              <input type="text" id="buscador"class="nav-link form-control" placeholder="Escribe aquí..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <div class="input-group ml-2">
               <div class="input-group-append">
-                <button class="btn btn-outline-success h-100" type="submit">Ver Canales</button>
+                <button id="botoncito" class="btn btn-outline-success h-100" type="submit">Ver Canales</button>
               </div>
             </div>
           </li>
@@ -72,7 +65,12 @@
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
 
-          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          {% if is_granted('ROLE_USER') %}
+          <li class="dropdown">
+            <a {#href="editaUsuario"#} >
+              <img id="profileImg" src="{{asset('img2/profiler/' ~ app.user.foto)}}" 
+                  class="img " alt={{app.user.foto}}>
+            </a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -86,12 +84,9 @@
               </li>
               <li><a href="#">Drop Down 2</a></li>
               <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-
-          {% if is_granted('ROLE_USER') %}
               <li><a class="nav-link" href="logout">Cerrar Sesión</a></li>
+            </ul>
+          </li> 
               {% else %}
               <li><a class="nav-link" href="login">Iniciar Sesión</a></li>
               <li><a class="nav-link" href="register">Registrarse</a></li>
@@ -103,7 +98,7 @@
 
     </div>
   </header><!-- End Header -->
-
+<div class="altoMain">
   <main id="main">
 
     <!-- ======= About Us Section ======= -->
@@ -736,7 +731,7 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
-
+</div>
   <!-- ======= Footer ======= -->
   <footer id="footer">
 

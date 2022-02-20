@@ -6,6 +6,7 @@ return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\Admin\\DashboardController::index'], [], [['text', '/admin']], [], [], []],
     'precioCanal_show' => [['author'], ['_controller' => 'App\\Controller\\CanalController::findPrecioByAuthor'], [], [['variable', '/', '[^/]++', 'author', true], ['text', '/canal/precio']], [], [], []],
+    'CanalAll_show' => [[], ['_controller' => 'App\\Controller\\CanalController::findCanalByAll'], [], [['text', '/canal/findAll']], [], [], []],
     'CanalAuthor_show' => [['author'], ['_controller' => 'App\\Controller\\CanalController::findCanalByAuthor'], [], [['variable', '/', '[^/]++', 'author', true], ['text', '/canal/find']], [], [], []],
     'prueba' => [[], ['_controller' => 'App\\Controller\\IndexController::index'], [], [['text', '/index']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],

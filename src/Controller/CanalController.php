@@ -15,23 +15,39 @@ class CanalController extends AbstractController
             
             return new Response($Canal[0]["precio"]);
         }
-        
-    #[Route('/canal/find', name: 'CanalAll_show')]
+    // La primera vez llamaremos a todos los canales y crearemos la 
+    // estructura del buscador 
+    #[Route('/canal/findAll', name: 'CanalAll_show')]
         public function findCanalByAll( ManagerRegistry $doctrine): Response
         {
-                $Canal = $doctrine->getRepository(Canal::class)->findCanalByAll();
-        
-            return new Response(json_encode($Canal));
-        }
+                
+            $canales = $doctrine->getRepository(Canal::class)->findCanalByAll();
 
+                $response = array( 
+                    "code" => 200,
+                    "responseHead" => $this->render('canales/canalesCabecera.html.twig')
+                    ->getContent(), 
+                    "responseBody" => $this->render('canales/canales.html.twig', [
+                    'canales' => $canales,
+                    ])->getContent());
+                    return new Response(json_encode($response));          }
+    
+    // Una vez ya hayamos creado nuestra estructura, unicamente necesitaremos
+    // 
     #[Route('/canal/find/{author}', name: 'CanalAuthor_show')]
-        public function findCanalByAuthor(string $author, ManagerRegistry $doctrine): Response
-        {
-            if ($author == "") {
-                $Canal = $doctrine->getRepository(Canal::class)->findCanalByAll();
+        public function findCanalByAuthor(string $author , ManagerRegistry $doctrine): Response
+        {   
+            if ($author == "all") {
+                $canales = $doctrine->getRepository(Canal::class)->findCanalByAll();
             }else{
-                $Canal = $doctrine->getRepository(Canal::class)->findCanalByAuthor($author);
+                $canales = $doctrine->getRepository(Canal::class)->findCanalByAuthor($author);
             }
-            return new Response(json_encode($Canal));
+
+            $response = array( 
+                "code" => 200,
+                "response" => $this->render('canales/canales.html.twig', [
+                'canales' => $canales,
+                ])->getContent());
+                return new Response(json_encode($response));   
         }
     }       

@@ -42,7 +42,9 @@ class RegistrationController extends AbstractController
                     $form->get('password')->getData()
                 )
             );
+            // if($foto = $foto['foto'])->getData()){
 
+            // }
             $entityManager->persist($user);
             $entityManager->flush();
 

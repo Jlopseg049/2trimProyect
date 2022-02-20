@@ -23,14 +23,12 @@ class UserCrudController extends AbstractCrudController
         $roles = ['ROLE_ADMIN', 'ROLE_USER'];
         return [
             yield ImageField::new('foto')
-            ->setBasePath( 'img\profiler')
-                ->setUploadDir('assets\img\profiler')
+            ->setBasePath( 'img/profiler')
+                ->setUploadDir('img/profiler')
                ,
             yield EmailField::new('email'),
             yield TextField::new('username'),
-            yield TextField::new('password')
-            ->setFormType(PasswordType::class),
-
+            yield TextField::new('password'),
             yield TextField::new('name'),
             yield TextField::new('ap1'),
             yield TextField::new('ap2'),

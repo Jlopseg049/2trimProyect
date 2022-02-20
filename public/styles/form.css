@@ -79,6 +79,7 @@ body{
     transform: translateX(30px);
     transition: all 0.7s ease;
 }
+
 .form-horizontal .btn:hover,
 .form-horizontal .btn:focus{
 
