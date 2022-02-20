@@ -65,11 +65,14 @@ class CanalRepository extends ServiceEntityRepository
     }
     public function findCanalByAuthor(string $author)
     {
+
+        //En postgres sql, existe el comparador ILIKE que no discrimina mayusuclas de minuscula
+        //Aunque sí los acentos.
         $con = $this->getEntityManager()->getConnection();
         $author= "'".$author."%'";
         $query ='select canal.id, canal.nombre, u.username, u.foto from canal
                     join "user" u on u.id = canal.author_id
-                where u.username like '. $author;
+                where u.username  ILIKE  '. $author;
         $resul = $con->prepare($query);
         $ª=  $resul->execute();
         return $ª->fetchAllAssociative();

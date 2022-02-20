@@ -60,7 +60,7 @@ class __TwigTemplate_9ea14b97b10a93a1958b35d6797ace5a extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
         // line 4
-        echo "    <title>Creative Colorlib SignUp Form</title>
+        echo " StromZu
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -152,7 +152,7 @@ class __TwigTemplate_9ea14b97b10a93a1958b35d6797ace5a extends Template
         echo "
 
 \t<!-- main -->
-\t<div class=\"main-w3layouts wrapper\">
+\t<div class=\"main-w3layouts wrapper mt-0\">
 \t\t<h1>Registro</h1>
 \t\t<div class=\"main-agileinfo\">
 \t\t\t<div class=\"agileits-top\">
@@ -252,7 +252,7 @@ class __TwigTemplate_9ea14b97b10a93a1958b35d6797ace5a extends Template
         return new Source("            {% extends 'base.html.twig' %}
 
 {% block title %}
-    <title>Creative Colorlib SignUp Form</title>
+ StromZu
 {% endblock %}
 {% block head %}
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
@@ -296,7 +296,7 @@ class __TwigTemplate_9ea14b97b10a93a1958b35d6797ace5a extends Template
 
 
 \t<!-- main -->
-\t<div class=\"main-w3layouts wrapper\">
+\t<div class=\"main-w3layouts wrapper mt-0\">
 \t\t<h1>Registro</h1>
 \t\t<div class=\"main-agileinfo\">
 \t\t\t<div class=\"agileits-top\">

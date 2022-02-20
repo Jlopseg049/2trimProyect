@@ -49,6 +49,9 @@ class __TwigTemplate_a56c826c92eaa1c526948bf72bb7cf21 extends Template
         <div class=\"row aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"100\">
           <div class=\"col-lg-12 d-flex justify-content-center\">
             <ul id=\"portfolio-flters\">
+            <li>
+              <button id=\"vueltaInicio\" class=\"btn btn-outline-success h-100\" type=\"submit\">Volver a inicio</button>
+            </li>
               <li data-filter=\"*\" class=\"filter-active\">
                 <input id=\"buscador\" class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">
               </li>
@@ -92,6 +95,9 @@ class __TwigTemplate_a56c826c92eaa1c526948bf72bb7cf21 extends Template
         <div class=\"row aos-init aos-animate\" data-aos=\"fade-up\" data-aos-delay=\"100\">
           <div class=\"col-lg-12 d-flex justify-content-center\">
             <ul id=\"portfolio-flters\">
+            <li>
+              <button id=\"vueltaInicio\" class=\"btn btn-outline-success h-100\" type=\"submit\">Volver a inicio</button>
+            </li>
               <li data-filter=\"*\" class=\"filter-active\">
                 <input id=\"buscador\" class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">
               </li>

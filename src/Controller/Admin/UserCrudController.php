@@ -7,7 +7,6 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class UserCrudController extends AbstractCrudController
@@ -23,8 +22,8 @@ class UserCrudController extends AbstractCrudController
         $roles = ['ROLE_ADMIN', 'ROLE_USER'];
         return [
             yield ImageField::new('foto')
-            ->setBasePath( 'img/profiler')
-                ->setUploadDir('img/profiler')
+            ->setBasePath( 'img2/profiler')
+                ->setUploadDir('public\img2\profiler')
                ,
             yield EmailField::new('email'),
             yield TextField::new('username'),
