@@ -1471,6 +1471,6 @@ class __TwigTemplate_98ca25d087fd6a7adc17fcb5c7cc6a77 extends Template
 </body>
 
 </html>
-", "index/index.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\templates\\index\\index.html.twig");
+", "index/index.html.twig", "C:\\Users\\alumno\\Desktop\\StromZu\\templates\\index\\index.html.twig");
     }
 }

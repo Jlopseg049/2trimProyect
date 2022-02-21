@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface; 
+use Symfony\Component\Validator\Constraints\Image;
 use Symfony\Component\Validator\Constraints\IsTrue;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -21,8 +22,8 @@ class RegistrationFormType extends AbstractType
             // ->add('Foto')
             ->add('email',       TextType::class, array('label' => 'Correo',             'attr' => array('class' => 'input-control'
                                 ,'placeholder' => 'Correo')))
-            ->add('foto',        FileType::class, ['label' => 'Seleccione una foto de perfil',
-                                'required' => false])
+            ->add('foto',        FileType::class, ['label' => 'Seleccione una foto de perfil',  'attr' => array('class' => 'input-control'),
+                                'required' => false,               "constraints" => [ new Image([ 'maxSize' => '1024k'])]])
             
             ->add('username',    TextType::class, array('label' => 'Nombre de Usuario',  'attr' => array('class' => 'input-control'
                                 ,'placeholder' => 'username')))

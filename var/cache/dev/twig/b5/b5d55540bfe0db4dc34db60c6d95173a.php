@@ -340,6 +340,6 @@ class __TwigTemplate_9ea14b97b10a93a1958b35d6797ace5a extends Template
 {% endblock %}
 
 
-", "registration/register.html.twig", "C:\\Users\\Kazu\\Desktop\\StromZu\\templates\\registration\\register.html.twig");
+", "registration/register.html.twig", "C:\\Users\\alumno\\Desktop\\StromZu\\templates\\registration\\register.html.twig");
     }
 }
